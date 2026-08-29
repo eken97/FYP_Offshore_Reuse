@@ -495,6 +495,58 @@ const DATA = {"meta":{"design_life_years":25.0,"year_steps":[0,5,10,15,20,25],"c
     draw(); e.preventDefault();
   }, { passive: false });
 
+  // Touch: 1-finger drag orbits, 2-finger pinch zooms, a stationary tap
+  // selects. Mirrors the mouse/wheel handlers above and leaves the mouse
+  // path untouched, so desktop behaviour is unchanged. The canvas already
+  // has `touch-action: none` (CSS), so the browser won't claim the gesture
+  // for page scroll/zoom.
+  let touchMode = 0; // 0 idle, 1 orbit, 2 pinch
+  let tLastX = 0, tLastY = 0, tPinch = 0, tMoved = 0;
+  canvas.addEventListener('touchstart', e => {
+    if (e.touches.length === 1) {
+      touchMode = 1; tMoved = 0;
+      tLastX = e.touches[0].clientX; tLastY = e.touches[0].clientY;
+    } else if (e.touches.length === 2) {
+      touchMode = 2;
+      tPinch = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                          e.touches[0].clientY - e.touches[1].clientY);
+    }
+    e.preventDefault();
+  }, { passive: false });
+  canvas.addEventListener('touchmove', e => {
+    if (touchMode === 1 && e.touches.length === 1) {
+      const dx = e.touches[0].clientX - tLastX, dy = e.touches[0].clientY - tLastY;
+      tMoved += Math.abs(dx) + Math.abs(dy);
+      az -= dx * 0.008;
+      el = Math.max(-1.45, Math.min(1.45, el + dy * 0.008));
+      tLastX = e.touches[0].clientX; tLastY = e.touches[0].clientY;
+      draw();
+    } else if (touchMode === 2 && e.touches.length === 2) {
+      const d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX,
+                           e.touches[0].clientY - e.touches[1].clientY);
+      if (tPinch > 0) zoom = Math.max(0.2, Math.min(8, zoom * d / tPinch));
+      tPinch = d;
+      draw();
+    }
+    e.preventDefault();
+  }, { passive: false });
+  canvas.addEventListener('touchend', e => {
+    if (touchMode === 1 && tMoved < 12 && e.changedTouches.length) {
+      const rect = canvas.getBoundingClientRect();
+      const hit = pickAt(e.changedTouches[0].clientX - rect.left,
+                         e.changedTouches[0].clientY - rect.top);
+      if (hit) select(hit); else deselect();
+    }
+    if (e.touches.length === 0) {
+      touchMode = 0;
+    } else if (e.touches.length === 1) {
+      // lifting one finger of a pinch -- keep orbiting with the other,
+      // but don't let its eventual lift count as a tap
+      touchMode = 1; tMoved = 999;
+      tLastX = e.touches[0].clientX; tLastY = e.touches[0].clientY;
+    }
+  });
+
   function camBasis() {
     const dir = [Math.cos(el) * Math.cos(az), Math.cos(el) * Math.sin(az), Math.sin(el)];
     const worldUp = [0, 0, 1];
