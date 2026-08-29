@@ -11,9 +11,23 @@ carrying the NREL 5MW turbine, followed by a fatigue post-processing pipeline
 that produces a per-member and per-joint damage map, a corrosion trajectory
 to 25 years, and — for the joints — two can-thickness retrofit scenarios.
 
-The reuse-acceptance classification, the static/ULS governing-life check and
-the embodied-carbon comparison that the dissertation builds on top of these
-numbers are **not** published here — see *What is not here* below.
+The static/ULS governing-life check and the embodied-carbon comparison that
+the dissertation builds on top of these numbers are **not** published here.
+The reuse-acceptance classification code is not here either, though the
+interactive viewer below does show its per-member outcomes. See *What is not
+here* below.
+
+---
+
+## Interactive viewer
+
+**[Explore the results in 3D →](https://eken97.github.io/FYP_Offshore_Reuse/)**
+
+A self-contained page showing the whole jacket with every member and joint
+colour-coded by fatigue damage, across the corrosion trajectory to 25 years
+and both can-thickness retrofit scenarios. A second tab visualises the
+dissertation's L0–L4 reuse-classification outcomes. Built from the tables in
+`results/`; the page source is [`index.html`](index.html).
 
 ---
 
@@ -95,11 +109,15 @@ IEC 61400 are licensed documents and are not reproduced. Where a parameter
 comes from one, the source clause or table is cited in the code so you can
 check it against your own copy.
 
-**The downstream assessment.** The dissertation takes the damage numbers this
-repository produces and adds a proposed L0–L4 reuse acceptance
+**The downstream assessment code.** The dissertation takes the damage numbers
+this repository produces and adds a proposed L0–L4 reuse-acceptance
 classification, a static/ULS governing-life check, and an embodied-carbon
-comparison. None of that is published here — this repository ends at the
-fatigue damage number per member and per joint.
+comparison. The code and result tables for those steps are not published
+here — this repository ends at the fatigue damage number per member and per
+joint. The interactive viewer does display the reuse-classification
+*outcomes* (retained / downgraded / recycle per member) next to the fatigue
+results as a visual summary; the classification method itself is defined in
+the dissertation.
 
 **The dissertation itself**, and third-party validation datasets.
 

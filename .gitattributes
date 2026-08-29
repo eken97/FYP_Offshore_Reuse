@@ -10,3 +10,7 @@
 *.xlsx  binary
 *.docx  binary
 *.outb  binary
+
+# Generated single-file viewer (built from results/ by an external script);
+# keep it out of language stats and collapse it in diffs.
+index.html linguist-generated
