@@ -1,19 +1,19 @@
-# Fatigue-driven reuse assessment of an OC4 offshore wind jacket
+# Fatigue damage assessment of an OC4 offshore wind jacket
 
 Code, results and documentation from an MEng dissertation at University
-College Cork asking a fairly narrow question: **when a jacket substructure is
-decommissioned, how much of it could actually be reused — and what decides
-that?**
+College Cork. The wider dissertation asks how much of a decommissioned
+jacket substructure could be reused; **this repository is the fatigue
+engine underneath it** — everything up to and including the accumulated
+fatigue damage number for each member and each joint.
 
 The approach is a 414-run OpenFAST campaign over the OC4 reference jacket
 carrying the NREL 5MW turbine, followed by a fatigue post-processing pipeline
 that produces a per-member and per-joint damage map, a corrosion trajectory
-to 25 years, a static/ULS check, and an L0–L4 reuse classification.
+to 25 years, and — for the joints — two can-thickness retrofit scenarios.
 
-Existing reuse guidance for structural steel — SCI P427 and similar — has a
-fatigue-shaped hole in it: it was written for buildings, where fatigue is
-rarely the governing question. This work is an attempt to fill that gap for
-offshore substructures.
+The reuse-acceptance classification, the static/ULS governing-life check and
+the embodied-carbon comparison that the dissertation builds on top of these
+numbers are **not** published here — see *What is not here* below.
 
 ---
 
@@ -21,20 +21,10 @@ offshore substructures.
 
 - **Members are not fatigue-critical.** The worst member reaches a damage
   ratio of about 0.115 at 25 years — a fatigue life of roughly 217 years.
-- **The static check governs, not fatigue.** Of the splash-zone members whose
-  remaining life is limited at all, all 32 are governed by the static
-  compression or tension check (27 and 5 respectively), never by fatigue. The
-  shortest governing life is 34.5 years.
-- **Joints are the binding constraint.** Several splash-zone joints exceed a
+- **Joints are where the fatigue is.** Several splash-zone joints exceed a
   damage ratio of 1.0 by more than an order of magnitude, and the same
-  splash-zone joints fail under every scenario examined.
-- **No member reaches structural reuse.** Under both can-thickness retrofit
-  scenarios, 80 of 112 members classify as L2 (component reuse) and 32 as L3
-  (downgraded reuse). All four bays fail the L1 structural-reuse gate.
-
-The practical reading is that reuse of this structure is credible at the
-component level and not at the structural level, and that the constraint sits
-at the joints — which is where existing reuse guidance says least.
+  splash-zone joints stay the worst under every scenario examined —
+  pristine, corroded, and after either can-thickness retrofit.
 
 Numbers come from `results/`. Read [docs/limitations.md](docs/limitations.md)
 before quoting any of them.
@@ -45,8 +35,8 @@ before quoting any of them.
 
 ```
 simulation/       OpenFAST campaign: config, deck editing, build, run, work split
-postprocessing/   the fatigue pipeline: geometry, stress, rainflow, S-N, damage,
-                  reuse classification, figure builders
+postprocessing/   the fatigue pipeline: geometry, stress, rainflow, S-N,
+                  damage (pristine / corrosion / can-retrofit), figure builders
 scripts/          fetch the NREL decks; run the worked example
 data/             metocean bin table + one worked-example Stage-2 cache
 results/          the campaign's result tables (CSV/XLSX)
@@ -74,7 +64,6 @@ Then:
 | [docs/decisions.md](docs/decisions.md) | why it is built this way; alternatives considered and dropped |
 | [docs/traps.md](docs/traps.md) | **the most useful file here** — things that silently produce wrong answers |
 | [docs/assumptions.md](docs/assumptions.md) | every assumed value and its verification status |
-| [docs/reuse-criteria.md](docs/reuse-criteria.md) | the L0–L4 ladder and its thresholds |
 | [docs/limitations.md](docs/limitations.md) | what this does **not** establish |
 
 ---
@@ -105,6 +94,12 @@ distinction matters and is spelled out in
 IEC 61400 are licensed documents and are not reproduced. Where a parameter
 comes from one, the source clause or table is cited in the code so you can
 check it against your own copy.
+
+**The downstream assessment.** The dissertation takes the damage numbers this
+repository produces and adds a proposed L0–L4 reuse acceptance
+classification, a static/ULS governing-life check, and an embodied-carbon
+comparison. None of that is published here — this repository ends at the
+fatigue damage number per member and per joint.
 
 **The dissertation itself**, and third-party validation datasets.
 

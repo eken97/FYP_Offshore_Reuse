@@ -40,28 +40,16 @@ independent reviewer as a batch, which is the honest status.
 
 Do not present member-track and joint-track numbers at equal confidence.
 
-## The thresholds are proposed, not standardised
+## It stops at the damage number
 
-The L0–L4 ladder in [reuse-criteria.md](reuse-criteria.md) is a construction.
-The section-loss limit comes from SCI P427; the **fatigue** limits do not,
-because P427 has no fatigue criterion to borrow. They were set by analogy to
-P427's own conservatism.
-
-That is a defensible choice and it is also the weakest link between the
-damage numbers and the reuse verdict. Someone else applying different
-thresholds to the same damage data would reach different levels.
-
-## Emission factors are literature values
-
-The embodied-carbon work uses published emission factors (IStructE *How to
-Calculate Embodied Carbon*, 3rd ed.) rather than project-specific EPDs. No
-supply chain was modelled, no transport or reprocessing energy for a real
-reuse route was costed, and the carbon accounting boundary is a stated
-assumption rather than a derived one.
-
-There is also a genuine gap in the literature here: offshore-specific reuse
-emission factors are scarce, so the reuse figure inherits uncertainty that
-the recycling and primary-steel figures do not.
+This repository computes fatigue damage per member and per joint — pristine,
+on the corrosion trajectory to 25 years, and (for joints) under two
+can-thickness retrofit scenarios. What the dissertation then did with those
+numbers — a proposed L0–L4 reuse acceptance classification, a static/ULS
+governing-life check, and an embodied-carbon comparison — is **not** in this
+repository. Any statement about whether the structure can be reused, about
+which check governs remaining life, or about carbon savings belongs to that
+downstream work and cannot be reconstructed from what is published here.
 
 ## Scope boundaries baked into the model
 
@@ -103,12 +91,11 @@ Given all of the above, the analysis does support:
 
 - a **relative** damage map across the structure — which members and joints
   are worst, and by how much
-- the finding that the **static check governs** remaining life for much of
-  the structure, rather than fatigue
-- the observation that **splash-zone joints** are the binding constraint on
-  reuse, and that they fail every scenario examined
-- a framework in which reuse acceptance is **condition-gated** rather than
-  assumed, with the carbon consequence following from the condition verdict
+- the finding that member fatigue damage stays low over the 25-year horizon,
+  while **splash-zone joints** carry damage ratios more than an order of
+  magnitude higher
+- how that joint damage responds to corrosion and to can-thickness
+  reinforcement, as a first-order estimate
 
 Those are conclusions about method and relative severity. They are not a
 certification of any structure.

@@ -155,25 +155,22 @@ with cathodic protection, free corrosion — assigned by member zone.
 ### No design fatigue factor
 
 A DFF was considered and rejected. The question this work asks is what the
-structure's *actual* accumulated damage is, in order to judge reuse. Folding
-in a design safety factor conflates "what has happened to this steel" with
-"what margin a new design would require", and makes the reuse verdict
-uninterpretable.
+structure's *actual* accumulated fatigue damage is. Folding in a design
+safety factor conflates "what has happened to this steel" with "what margin a
+new design would require", and leaves the damage number uninterpretable.
 
-Safety factors do appear, in the right place: the static check applies
-γ_M = 1.10 per DNV-ST-0126, with a further ×1.15 for reclaimed steel per
-P427 §4.5.
-
-### Two corrosion rates, kept separate
+### Corrosion rate
 
 The design basis gives 0.30 mm/yr per surface generally, and permits halving
-the allowance for fatigue design specifically. So: **0.15 mm/yr for fatigue,
-0.30 mm/yr for the static/ULS check**, applied to both surfaces of the
-(flooded) legs and the external surface only of the braces.
+the allowance for fatigue design specifically. This repository's fatigue
+tracks therefore use **0.15 mm/yr**, applied to both surfaces of the
+(flooded) legs and the external surface only of the braces. The un-halved
+0.30 mm/yr rate is defined in `sd_geometry.py` for completeness but is not
+exercised by any code here — the non-fatigue checks that used it are not
+published in this repository.
 
 An earlier version applied "both sides everywhere at the full 0.3 mm/yr" and
-was superseded. Later, the fatigue rate was mistakenly used in a static
-check — see [traps.md](traps.md#two-rates-and-they-are-not-interchangeable).
+was superseded.
 
 ### 25-year horizon
 

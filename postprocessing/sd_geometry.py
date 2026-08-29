@@ -302,11 +302,12 @@ CORROSION_RATE_MM_PER_YEAR_PER_SURFACE = {
 # The Design Basis's GENERAL corrosion rate -- 0.30 mm/yr per surface, i.e.
 # the full (un-halved) allowance. The halved 0.15 rate above is permitted
 # for FATIGUE design specifically; every non-fatigue check (static/ULS
-# capacity, section-loss / L0-L3 classification, mass balance) must use this
-# general rate instead. Pass it as `rates=` to corroded_section(). Same
-# ext/int split as the fatigue dict: legs flooded (both surfaces), braces
-# external only. Mirrors stage4_reuse_classification.py's own
-# GENERAL_CORROSION_RATE_MM_PER_YEAR_PER_SURFACE (kept in sync).
+# capacity, section-loss classification, mass balance) must use this general
+# rate instead, passed as `rates=` to corroded_section(). Same ext/int split
+# as the fatigue dict: legs flooded (both surfaces), braces external only.
+# Retained for completeness -- the non-fatigue checks that consumed it are
+# not part of this repository (see docs/pipeline.md), so nothing here passes
+# `rates=` and every caller takes the 0.15 fatigue default.
 GENERAL_CORROSION_RATE_MM_PER_YEAR_PER_SURFACE = {
     "leg": dict(ext=0.30, int=0.30),
     "brace": dict(ext=0.30, int=0.0),

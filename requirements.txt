@@ -5,7 +5,6 @@ pandas
 matplotlib
 rainflow          # cycle counting (ASTM E1049) used by rainflow_hist.py
 openpyxl          # reading/writing the .xlsx appendix tables
-python-docx       # build_static_appendix.py only
 
 # Optional. Used solely by outb_reader.py's self-check to cross-validate the
 # targeted .outb reader against the reference implementation. The pipeline

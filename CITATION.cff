@@ -9,15 +9,17 @@ authors:
     given-names: Gregor Elias
     affiliation: University College Cork
 abstract: >-
-  Code, results and documentation from an MEng dissertation assessing how
-  much of a decommissioned offshore wind jacket substructure could be
-  reused. A 414-run OpenFAST campaign over the OC4 reference jacket
-  carrying the NREL 5MW turbine feeds a fatigue post-processing pipeline
-  producing per-member and per-joint damage maps, a corrosion trajectory
-  to 25 years, a static/ULS check, and an L0-L4 reuse classification.
-  Finds that the static check rather than fatigue governs remaining life
-  for most members, and that splash-zone joints are the binding
-  constraint on reuse.
+  The fatigue analysis underneath an MEng dissertation on reuse of
+  decommissioned offshore wind jacket substructures. A 414-run OpenFAST
+  campaign over the OC4 reference jacket carrying the NREL 5MW turbine feeds
+  a fatigue post-processing pipeline producing per-member and per-joint
+  damage maps, a corrosion trajectory to 25 years, and two can-thickness
+  retrofit scenarios for the joints. Members stay well below unity over the
+  25-year horizon; splash-zone joints exceed it by more than an order of
+  magnitude and remain the worst locations under every scenario examined.
+  The downstream reuse-acceptance classification, static/ULS check and
+  embodied-carbon comparison from the dissertation are not included in this
+  release.
 keywords:
   - offshore wind
   - jacket substructure

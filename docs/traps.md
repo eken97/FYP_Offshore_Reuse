@@ -163,22 +163,23 @@ The design basis gives a general corrosion rate of **0.30 mm/yr per surface**,
 and separately permits the allowance to be **halved for fatigue design
 specifically** — as distinct from extreme/ULS design.
 
-So this project uses:
+The fatigue tracks in this repository use:
 
-- **0.15 mm/yr per surface** for fatigue life calculations
-- **0.30 mm/yr per surface** for the static/ULS check
+- **0.15 mm/yr per surface** — the halved, fatigue-specific rate
 
-and applies it to:
+applied to:
 
 - **legs** — both surfaces (they are flooded)
 - **braces** — external surface only
 
-Using the fatigue rate in a static check is a real bug that was made and
-caught here. It makes the structure look considerably healthier than it is,
-and because both numbers are defensible in isolation, nothing looks wrong.
-Keep the two rates explicitly separate in code, as
+The un-halved **0.30 mm/yr** rate belongs to non-fatigue checks (static/ULS
+capacity, section-loss classification) that are not part of this repository.
+Both rates are still defined separately in `sd_geometry.py`, as
 `CORROSION_RATE_MM_PER_YEAR_PER_SURFACE` and
-`GENERAL_CORROSION_RATE_MM_PER_YEAR_PER_SURFACE` do in `sd_geometry.py`.
+`GENERAL_CORROSION_RATE_MM_PER_YEAR_PER_SURFACE`, so that using the
+fatigue rate where the general rate is required stays a hard-to-make
+mistake — it makes a structure look considerably healthier than it is, and
+because both numbers are defensible in isolation, nothing looks wrong.
 
 ---
 

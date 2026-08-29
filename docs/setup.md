@@ -47,9 +47,8 @@ into `figures/`:
 
 ```bash
 cd postprocessing
-python report_figures_members.py        # 11 member-track figures
-python report_figures_static_check.py   # 2 static-check figures
-python report_figures_joints.py         # 11 joint-track figures
+python report_figures_members.py        # member-track figures
+python report_figures_joints.py         # joint-track figures
 ```
 
 The joint and member builders need the jacket geometry, which they read from
