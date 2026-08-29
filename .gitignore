@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------------------
+# Third-party OpenFAST model files.
+#
+# The NREL 5MW / OC4 jacket decks are NOT redistributed here. They are staged
+# locally by scripts/fetch_openfast_inputs.py and must never be committed.
+# ---------------------------------------------------------------------------
+/inputs/
+/.rtest/
+
+# ---------------------------------------------------------------------------
+# Campaign run data and regenerable caches.
+#
+# Raw OpenFAST output is ~119 GB for the 414-run campaign and the Stage-2
+# histogram cache is ~3.6 GB; both are fully regenerable and live outside the
+# repository. The only exception is data/example/, which is deliberately
+# tracked -- see docs/pipeline.md.
+# ---------------------------------------------------------------------------
+*.outb
+*.bts
+*.sum
+*.sum.yaml
+*.ech
+_staging/
+runs/
+_stage2_local/
+
+# Self-check / scratch output written next to the shipped results.
+_*_selfcheck/
+_timing_check/
+_scratch_*
+*_CHECK.csv
+
+# Tracked worked-example cache (overrides the *.npz rule below).
+*.npz
+!data/example/**/*.npz
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: >-
+  Fatigue-driven structural reuse assessment of a decommissioned
+  OC4 offshore wind jacket
+message: >-
+  If you use this software, its results or its figures, please cite it
+  using these metadata.
+type: software
+authors:
+  - family-names: Kenneweg
+    given-names: Gregor Elias
+    affiliation: University College Cork
+abstract: >-
+  Code, results and documentation from an MEng dissertation assessing how
+  much of a decommissioned offshore wind jacket substructure could be
+  reused. A 414-run OpenFAST campaign over the OC4 reference jacket
+  carrying the NREL 5MW turbine feeds a fatigue post-processing pipeline
+  producing per-member and per-joint damage maps, a corrosion trajectory
+  to 25 years, a static/ULS check, and an L0-L4 reuse classification.
+  Finds that the static check rather than fatigue governs remaining life
+  for most members, and that splash-zone joints are the binding
+  constraint on reuse.
+keywords:
+  - offshore wind
+  - jacket substructure
+  - fatigue
+  - structural reuse
+  - circular economy
+  - decommissioning
+  - OpenFAST
+  - OC4
+  - NREL 5MW
+  - embodied carbon
+license: CC-BY-4.0
+license-url: "https://github.com/eken97/FYP_Offshore_Reuse/blob/main/LICENSE"
+repository-code: "https://github.com/eken97/FYP_Offshore_Reuse"
+version: "1.0.0"
+date-released: "2026-08-28"

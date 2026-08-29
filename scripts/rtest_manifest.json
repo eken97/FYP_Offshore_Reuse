@@ -1,0 +1,369 @@
+{
+  "upstream": "https://github.com/OpenFAST/r-test",
+  "commit": "dd5feaaaa500ba7283140107806300d551cff0a7",
+  "commit_date": "2026-03-12",
+  "case": "5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth",
+  "note": "SHA-256 of every NREL r-test file this project consumes. These files are NREL's, licensed Apache-2.0, and are NOT redistributed in this repository -- scripts/fetch_openfast_inputs.py stages them from upstream and checks them against these hashes.",
+  "files": {
+    "r-test-baseline/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth.fst": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth.fst",
+      "sha256": "cd58d4c9669e8e2b5a2c18eb433736667c7abd2eca11386632550c00b435f369",
+      "bytes": 8969
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_OC4Jacket_AeroDyn.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/NRELOffshrBsline5MW_OC4Jacket_AeroDyn.dat",
+      "sha256": "072f69d1507bcb411f0e430967a120780fb035f932c3792b57ea491234b1537e",
+      "bytes": 12648
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_OC4Jacket_ElastoDyn.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/NRELOffshrBsline5MW_OC4Jacket_ElastoDyn.dat",
+      "sha256": "9e136f80178feed759ba1097affe98e5bde5ce8434232e7a61095b88131d4800",
+      "bytes": 16240
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_OC4Jacket_ElastoDyn_Tower.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/NRELOffshrBsline5MW_OC4Jacket_ElastoDyn_Tower.dat",
+      "sha256": "3af41af93b70e33b0810ad7f313b233e538e53df7ba92f397d0a2407d8b96fe5",
+      "bytes": 4068
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_OC4Jacket_HydroDyn.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/NRELOffshrBsline5MW_OC4Jacket_HydroDyn.dat",
+      "sha256": "e18d17ce3f7002142cb777e90f877d44e28592c1e4a9d12fe1ae77f9e04329c7",
+      "bytes": 36240
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_OC4Jacket_HydroDyn_withIce.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/NRELOffshrBsline5MW_OC4Jacket_HydroDyn_withIce.dat",
+      "sha256": "624e960e033b5c22894ba48d53ab8c2c3d12e14b0ff80e8e518168346b7a84d1",
+      "bytes": 34767
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_OC4Jacket_ServoDyn.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/NRELOffshrBsline5MW_OC4Jacket_ServoDyn.dat",
+      "sha256": "23cca06da63c8d85f7d2c38311a7416ace2d5d0e43ff4580ba51a1294271d9b3",
+      "bytes": 13056
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_OC4Jacket_SubDyn.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/NRELOffshrBsline5MW_OC4Jacket_SubDyn.dat",
+      "sha256": "b2c56227f93af02f78b20f795d5d30c1d346f260b3f69c38ff9fe6558843b173",
+      "bytes": 29470
+    },
+    "r-test-baseline/SeaState.dat": {
+      "src": "glue-codes/openfast/5MW_OC4Jckt_DLL_WTurb_WavesIrr_MGrowth/SeaState.dat",
+      "sha256": "61226c4815cd4709406b811c82f489580002a05dbfea6b6e5e164b98b1731d4c",
+      "bytes": 10324
+    },
+    "r-test-baseline/NRELOffshrBsline5MW_InflowWind_12mps.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_InflowWind_12mps.dat",
+      "sha256": "97b504764260e293c65b292759a7bdd4d8b55943ca7c15a39fc65aa402f28548",
+      "bytes": 7655
+    },
+    "base_files/TurbSim_base.inp": {
+      "src": "glue-codes/openfast/5MW_Baseline/Wind/90m_12mps_twr.inp",
+      "sha256": "898a7731d1d8f9674d9942f44642898563fd36e0b2d4ab9011eb4f0934daa012",
+      "bytes": 7305
+    },
+    "base_files/5MW_Baseline/AeroData/Cylinder1.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/Cylinder1.dat",
+      "sha256": "4ade21f61d2f28e0e94562e7208e40e562a4aafdeccb2d961b66a0b3a3b7a48b",
+      "bytes": 711
+    },
+    "base_files/5MW_Baseline/AeroData/Cylinder2.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/Cylinder2.dat",
+      "sha256": "591d1336452ad993392675f0a7a761c5f16346125b4e0e0a93093e6f341ce37e",
+      "bytes": 711
+    },
+    "base_files/5MW_Baseline/AeroData/DU21_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/DU21_A17.dat",
+      "sha256": "9e4932a047b009c0618f86a4f28538e704395aba635be33179cc185b453eef8a",
+      "bytes": 6035
+    },
+    "base_files/5MW_Baseline/AeroData/DU25_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/DU25_A17.dat",
+      "sha256": "32a4bde2acfb312e5b61a4ae165d8c250380d38b64142fff5761aff27de55d6e",
+      "bytes": 5999
+    },
+    "base_files/5MW_Baseline/AeroData/DU30_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/DU30_A17.dat",
+      "sha256": "8930a1771ecaa2bfd961c460c73e161c56e399dd2dad2b706b1305dd0a8527f4",
+      "bytes": 6071
+    },
+    "base_files/5MW_Baseline/AeroData/DU35_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/DU35_A17.dat",
+      "sha256": "5bcfde38d38ac1c8a9ca5ffb46e764aa58f2410ef2839344c2496ea5c4d65478",
+      "bytes": 5783
+    },
+    "base_files/5MW_Baseline/AeroData/DU40_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/DU40_A17.dat",
+      "sha256": "c831d56ead68b1786b536df979b0ed61c768ab664f829588f55738d3d54824d1",
+      "bytes": 5819
+    },
+    "base_files/5MW_Baseline/AeroData/NACA64_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/AeroData/NACA64_A17.dat",
+      "sha256": "4252d2d30db1d4574d292f8afcd08e3524c0beaa74c79ce8c45681c5c3a88652",
+      "bytes": 5497
+    },
+    "base_files/5MW_Baseline/Airfoils/Cylinder1.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/Cylinder1.dat",
+      "sha256": "8cd740babf3de2449b28504335625382be076d40e3feedb3c04753820751873a",
+      "bytes": 7026
+    },
+    "base_files/5MW_Baseline/Airfoils/Cylinder1_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/Cylinder1_coords.txt",
+      "sha256": "3a3a40c1eee741786357bab6fb49ae37b925dcf47a16aec083e8712c5b3bb595",
+      "bytes": 8396
+    },
+    "base_files/5MW_Baseline/Airfoils/Cylinder2.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/Cylinder2.dat",
+      "sha256": "feeb9fb175dc918fccf580d9acf7a2238d86485e90af2d25f9bda3fdf4c450fc",
+      "bytes": 7095
+    },
+    "base_files/5MW_Baseline/Airfoils/Cylinder2_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/Cylinder2_coords.txt",
+      "sha256": "57928cf1f02057e34f45b00c71fc2468d7fc4d63605047a62907e25dee4637e0",
+      "bytes": 8400
+    },
+    "base_files/5MW_Baseline/Airfoils/DU21_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU21_A17.dat",
+      "sha256": "2ad661a5f04e87285b8c7f79e9e0b67765ce0f876a9597f604935eb6c47fa2f6",
+      "bytes": 12679
+    },
+    "base_files/5MW_Baseline/Airfoils/DU21_A17_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU21_A17_coords.txt",
+      "sha256": "b4d6350614b0fbbd6262ec340c78ee8eb0562ddfc8cf6bdf222228e739392ca4",
+      "bytes": 7865
+    },
+    "base_files/5MW_Baseline/Airfoils/DU25_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU25_A17.dat",
+      "sha256": "52fcce2a8fd1159f38cdd1a8bfd365f79e3060e66ea91d5ab8fbce1f16ec20a7",
+      "bytes": 12601
+    },
+    "base_files/5MW_Baseline/Airfoils/DU25_A17_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU25_A17_coords.txt",
+      "sha256": "08e7d345ef3e066f059f1fcf5f9b779e6a7e455ff2f6944931b227916d7730e7",
+      "bytes": 8060
+    },
+    "base_files/5MW_Baseline/Airfoils/DU30_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU30_A17.dat",
+      "sha256": "113387e58db28716aa9d2e1b023200fc32354095651c53042e3615ec6093ff82",
+      "bytes": 12720
+    },
+    "base_files/5MW_Baseline/Airfoils/DU30_A17_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU30_A17_coords.txt",
+      "sha256": "fb63e89e1c53c3278cd420a5ab36402a4d609850f1869f4013848a041e7a5c93",
+      "bytes": 8066
+    },
+    "base_files/5MW_Baseline/Airfoils/DU35_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU35_A17.dat",
+      "sha256": "701cff83e01a187209ff788a3fc4bfb9b8592546462a5aec2f0df54701d05763",
+      "bytes": 12406
+    },
+    "base_files/5MW_Baseline/Airfoils/DU35_A17_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU35_A17_coords.txt",
+      "sha256": "cdbb3d2d5735b0fd6be7a9c4b4439ba2ac6e78c3652657ef4090739c2dc0877a",
+      "bytes": 8066
+    },
+    "base_files/5MW_Baseline/Airfoils/DU40_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU40_A17.dat",
+      "sha256": "002e2176cf03eda520b160d5a46ce0f5f42125f892c9d0e1fd3c40424d249324",
+      "bytes": 12445
+    },
+    "base_files/5MW_Baseline/Airfoils/DU40_A17_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/DU40_A17_coords.txt",
+      "sha256": "5008c9aa91ada47cad7badd9330ba36c72010bdbf0450852cf5ed81c92cf6579",
+      "bytes": 8066
+    },
+    "base_files/5MW_Baseline/Airfoils/NACA64_A17.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/NACA64_A17.dat",
+      "sha256": "acfbf90a0aa479f560911d89b31ec20d02284496a74ecfc9b8ad0534c5d472b9",
+      "bytes": 12098
+    },
+    "base_files/5MW_Baseline/Airfoils/NACA64_A17_coords.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/Airfoils/NACA64_A17_coords.txt",
+      "sha256": "c91942a4843516ab7f1b17a34162d21dbc400fbb4011b60f83a83acf08c8bdec",
+      "bytes": 8272
+    },
+    "base_files/5MW_Baseline/HydroData/Barge.1": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/Barge.1",
+      "sha256": "5c1a9660b2e4671d0f8a8a0b30bef9b35960ac210fc887a77626c698d0e0394e",
+      "bytes": 56840
+    },
+    "base_files/5MW_Baseline/HydroData/Barge.3": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/Barge.3",
+      "sha256": "00d37c7fc0ad6be45fb7f87ac226aff743db9d2609b1824986e0d1c5702c08ea",
+      "bytes": 2042400
+    },
+    "base_files/5MW_Baseline/HydroData/Barge.hst": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/Barge.hst",
+      "sha256": "0af44d33f4c283f0015c83de506c93b2e374039d7cc286e6a76a83fa716c254b",
+      "bytes": 1044
+    },
+    "base_files/5MW_Baseline/HydroData/Barge.ss": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/Barge.ss",
+      "sha256": "850184973d3140331165eb0854c1ce2428365adc9a164e3fb3f29c1d88518044",
+      "bytes": 16796
+    },
+    "base_files/5MW_Baseline/HydroData/marin_semi.1": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/marin_semi.1",
+      "sha256": "6d05fa1d1f159c1c0a44a0b4f9a2029113c7bf96b942742a1681267fdff84792",
+      "bytes": 503496
+    },
+    "base_files/5MW_Baseline/HydroData/marin_semi.12d": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/marin_semi.12d",
+      "sha256": "00b2ce092a6e9496d56da648a30643bcab658ed873522837525b237ff8d8203f",
+      "bytes": 1216232
+    },
+    "base_files/5MW_Baseline/HydroData/marin_semi.12s": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/marin_semi.12s",
+      "sha256": "603e8395cbe6dae7deead548d9167e74445857e749289fec0f6c35f668e2f2fe",
+      "bytes": 1216232
+    },
+    "base_files/5MW_Baseline/HydroData/marin_semi.3": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/marin_semi.3",
+      "sha256": "8ae9d7e7b88c5426190292d9283a0a004ee89c6f219ff93fa8d53087ecad6fb1",
+      "bytes": 10171152
+    },
+    "base_files/5MW_Baseline/HydroData/marin_semi.hst": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/marin_semi.hst",
+      "sha256": "ba933c18034bacc87a932254ad47047d44eef006bc150b76fecd3445965482d8",
+      "bytes": 1044
+    },
+    "base_files/5MW_Baseline/HydroData/marin_semi.ss": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/marin_semi.ss",
+      "sha256": "2375dfd5b8e734eb3f3026663eaf7490fc6f568e8203cdde9fcf425f509d4a95",
+      "bytes": 53365
+    },
+    "base_files/5MW_Baseline/HydroData/marin_semi.ssexctn": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/marin_semi.ssexctn",
+      "sha256": "4995e752236bbf3d3d09661b248fb6e4d79fae4ae8f01cd0292b8adb3c085814",
+      "bytes": 20608
+    },
+    "base_files/5MW_Baseline/HydroData/Spar.1": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/Spar.1",
+      "sha256": "4e0ce3cd0acee4b6814bbc8db999f2c7063ff6bfc4a5dce364564d32c97f68c0",
+      "bytes": 56840
+    },
+    "base_files/5MW_Baseline/HydroData/Spar.3": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/Spar.3",
+      "sha256": "76e3e22d3a8db60a999a2009e05b8242ba1955d3671f8f0325ffe01716b355a0",
+      "bytes": 2042400
+    },
+    "base_files/5MW_Baseline/HydroData/Spar.hst": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/Spar.hst",
+      "sha256": "acdb81125dda17a8f94e8de9fe85dcceb8af62b516d0d96496792d94f5325ccf",
+      "bytes": 1044
+    },
+    "base_files/5MW_Baseline/HydroData/tlpmit.1": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/tlpmit.1",
+      "sha256": "0929b3c4d745ba87c69de10366d047e283343232a6b9445efb96348dc9addc6f",
+      "bytes": 56840
+    },
+    "base_files/5MW_Baseline/HydroData/tlpmit.3": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/tlpmit.3",
+      "sha256": "3a8042b0492be2061a58eda4f01d4631c882dc19e4d4a38367b3cc0433dd9f02",
+      "bytes": 2042400
+    },
+    "base_files/5MW_Baseline/HydroData/tlpmit.hst": {
+      "src": "glue-codes/openfast/5MW_Baseline/HydroData/tlpmit.hst",
+      "sha256": "4353419a2e495c6602a25fd76e4df4fd1e49a85b4e2e2a155ea02810e0447af3",
+      "bytes": 1044
+    },
+    "base_files/5MW_Baseline/IceDyn_Input.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/IceDyn_Input.dat",
+      "sha256": "181bf880b4b41eb73166752e6202542e8eb054fa2f7534bb7cb75b8244bb647d",
+      "bytes": 5133
+    },
+    "base_files/5MW_Baseline/IceFloe_IEC_Crushing.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/IceFloe_IEC_Crushing.dat",
+      "sha256": "ae2b7df51cb9353e8211e81fc9aa95aa54aaa3a9ba128c6bbbc6b3c416794efa",
+      "bytes": 1022
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_AeroDyn_blade.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_AeroDyn_blade.dat",
+      "sha256": "10b9ee4fa6cca5082b9a7be43945386524fabbd01616edef000b1efb65271161",
+      "bytes": 4546
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_BeamDyn.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_BeamDyn.dat",
+      "sha256": "cf6e28111dd2f73eb62e35893fc34c173d1e0a099f671e7e66ba62f20c57d13d",
+      "bytes": 7039
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_BeamDyn_Blade.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_BeamDyn_Blade.dat",
+      "sha256": "c7610d1c23877457c1ed75734a91a4ae3c0fb0264ee4e5e49ccca17882e04975",
+      "bytes": 58819
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_Blade.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_Blade.dat",
+      "sha256": "615b5352843f118e85c02616f8a0ae401e34c1df07d6dd3ed6f77bdd3d4198b5",
+      "bytes": 8049
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_InflowWind_12mps.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_InflowWind_12mps.dat",
+      "sha256": "97b504764260e293c65b292759a7bdd4d8b55943ca7c15a39fc65aa402f28548",
+      "bytes": 7655
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_InflowWind_Steady13mps.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_InflowWind_Steady13mps.dat",
+      "sha256": "c35376552342f4d2d5be0c8d61d23cbfa2e6684e787f6ea8ebf9cac1eb8deb17",
+      "bytes": 7642
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_InflowWind_Steady8mps.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_InflowWind_Steady8mps.dat",
+      "sha256": "8a3b1ca32027924c6eb6713d884972b864a38a56c2b971a7e31af689ccfc3ce6",
+      "bytes": 7603
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_Monopile_IEC_Crushing.inp": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_Monopile_IEC_Crushing.inp",
+      "sha256": "2d075101eb0b0100f37ff7aeb2a365f02ec61fca6486bb4a485611297fdb55a5",
+      "bytes": 525
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_Onshore_ElastoDyn_Tower.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_Onshore_ElastoDyn_Tower.dat",
+      "sha256": "9ab73f849b66bbb933d3e54243a8bdbc6f1604dab4f72f335af3e22d8a3d766d",
+      "bytes": 3523
+    },
+    "base_files/5MW_Baseline/NRELOffshrBsline5MW_ServoDyn_StC.dat": {
+      "src": "glue-codes/openfast/5MW_Baseline/NRELOffshrBsline5MW_ServoDyn_StC.dat",
+      "sha256": "c09f838c268e1938f36c10d7eee4d26d48f947e0b165fb52d5c7fbaee903dbb8",
+      "bytes": 9859
+    },
+    "base_files/5MW_Baseline/README.rst": {
+      "src": "glue-codes/openfast/5MW_Baseline/README.rst",
+      "sha256": "892a6339f40db6c75ff6f4033588b2a943e5d0728a0398eaf256d5d1d00f6fd0",
+      "bytes": 279
+    },
+    "base_files/5MW_Baseline/ServoData/DISCON/CMakeLists.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/ServoData/DISCON/CMakeLists.txt",
+      "sha256": "5dbbdd414ebb562f9f3156ec14e0687fcd24cf6d70fe462d54c01a598f657101",
+      "bytes": 3162
+    },
+    "base_files/5MW_Baseline/ServoData/DISCON/DISCON.F90": {
+      "src": "glue-codes/openfast/5MW_Baseline/ServoData/DISCON/DISCON.F90",
+      "sha256": "43e44536f2e7fca87c650b35553d6385474bf847ae6493268b9a6fdd8013b3e4",
+      "bytes": 32562
+    },
+    "base_files/5MW_Baseline/ServoData/DISCON.dll": {
+      "src": "glue-codes/openfast/5MW_Baseline/ServoData/DISCON.dll",
+      "sha256": "a2501ada8494c665c3a2ae6aa287a646dd2465ce4ab8c751998a47cf6a9ba548",
+      "bytes": 515072
+    },
+    "base_files/5MW_Baseline/ServoData/DISCON_ITI/CMakeLists.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/ServoData/DISCON_ITI/CMakeLists.txt",
+      "sha256": "de9d52470e33b822e69d57f87b5a13b962391309fb315839d91cda6265ed4f79",
+      "bytes": 3207
+    },
+    "base_files/5MW_Baseline/ServoData/DISCON_ITI/DISCON_ITIBarge.F90": {
+      "src": "glue-codes/openfast/5MW_Baseline/ServoData/DISCON_ITI/DISCON_ITIBarge.F90",
+      "sha256": "d46b69d467558a2eda3823a6ae336136837bc98559306fcc0bd56a171b23c0f8",
+      "bytes": 36924
+    },
+    "base_files/5MW_Baseline/ServoData/DISCON_OC3/CMakeLists.txt": {
+      "src": "glue-codes/openfast/5MW_Baseline/ServoData/DISCON_OC3/CMakeLists.txt",
+      "sha256": "7711fcfb3ea248edb8f09b4ccba3528ce9825ca94d8ea84b9263064fe9d94d70",
+      "bytes": 3212
+    },
+    "base_files/5MW_Baseline/ServoData/DISCON_OC3/DISCON_OC3Hywind.F90": {
+      "src": "glue-codes/openfast/5MW_Baseline/ServoData/DISCON_OC3/DISCON_OC3Hywind.F90",
+      "sha256": "202e1b8ef8c6211c851ca0a61a9f194e4cadd45a04c493daa799e407db86ab8e",
+      "bytes": 31494
+    }
+  }
+}

@@ -1,0 +1,37 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Gregor Elias Kenneweg
+
+SCOPE
+-----
+This licence covers everything in this repository authored by the copyright
+holder: the code in simulation/, postprocessing/ and scripts/, the result
+tables in results/, the figures in figures/, the data in data/, and the
+documentation in docs/.
+
+Third-party OpenFAST model files are not covered by this licence and are not
+distributed here at all -- see NOTICE.
+
+WHAT YOU MAY DO
+---------------
+Use, share and adapt this code, these results, and these figures for any
+purpose, including commercially, provided you give appropriate credit, link
+to the licence, and indicate whether changes were made.
+
+Suggested attribution:
+
+  Kenneweg, G. E. (2026). Fatigue-driven structural reuse assessment of a
+  decommissioned OC4 offshore wind jacket. University College Cork.
+  Licensed under CC BY 4.0.
+
+FULL LICENCE TEXT
+-----------------
+The complete legal text is at:
+
+  https://creativecommons.org/licenses/by/4.0/legalcode
+
+and a plain-language summary at:
+
+  https://creativecommons.org/licenses/by/4.0/
+
+In the event of any discrepancy, the canonical text linked above governs.

@@ -1,0 +1,12 @@
+# Normalise line endings so the repo is stable across Windows/Linux/macOS.
+* text=auto eol=lf
+
+# Binary assets: never touch these.
+*.png   binary
+# matplotlib writes SVG per-platform and is not byte-reproducible
+# (see docs/pipeline.md), so do not normalise these.
+*.svg   -text
+*.npz   binary
+*.xlsx  binary
+*.docx  binary
+*.outb  binary

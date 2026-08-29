@@ -1,0 +1,56 @@
+THIRD-PARTY MATERIAL
+====================
+
+OpenFAST and the NREL 5MW / OC4 jacket reference model
+------------------------------------------------------
+This project analyses the NREL 5MW reference turbine on the OC4 jacket
+substructure, simulated with OpenFAST. Those model files -- the .fst glue
+file, the ElastoDyn / AeroDyn / HydroDyn / SeaState / ServoDyn / SubDyn /
+InflowWind decks, the shared 5MW_Baseline blade, airfoil and controller data,
+and the compiled DISCON controller library -- are the work of the National
+Renewable Energy Laboratory and its OC4 project partners, not of this
+project.
+
+They are published as part of the OpenFAST regression-test suite:
+
+  https://github.com/OpenFAST/r-test
+
+and are licensed under the Apache License, Version 2.0:
+
+  https://www.apache.org/licenses/LICENSE-2.0
+
+NONE OF THAT MATERIAL IS REDISTRIBUTED IN THIS REPOSITORY.
+
+Every deck this project consumes was verified to be byte-identical to its
+upstream r-test copy: no NREL file was modified. All of this project's
+changes to the model are applied at run time, in code, by
+simulation/of_inputs.py -- which is this project's own work and is published
+here under CC BY 4.0 (see LICENSE).
+
+To obtain the model files, run:
+
+  python scripts/fetch_openfast_inputs.py --clone
+
+which stages them from the pinned upstream commit recorded in
+scripts/rtest_manifest.json and verifies each file by SHA-256. The manifest
+records the exact commit the published results were produced with, so a
+verification failure means your model differs from the one behind the numbers
+in results/.
+
+
+Standards referenced
+--------------------
+The methodology implements procedures from DNV-RP-C203, DNV-ST-0126,
+EN 1993-1-1 and IEC 61400. Those documents are copyrighted by their
+respective publishers and are NOT reproduced here. Where a numerical
+parameter is taken from a standard it appears in the source with a clause or
+table citation so it can be checked against a licensed copy. Readers need
+their own access to the standards to verify the implementation.
+
+
+Reference and comparison data
+-----------------------------
+Validation against the OC4 Phase I code-comparison exercise relies on
+project deliverables and participant result sets belonging to the OC4
+partners. Those documents are not redistributed here; they are cited in the
+thesis and should be obtained from their publishers.
